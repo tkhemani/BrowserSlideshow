@@ -1,0 +1,108 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="jquery.js"></script>
+    <!--<link href="Resources/bootstrap-responsive.min.css" rel="stylesheet" />-->
+    <link href="Resources/bootstrap.min.css" rel="stylesheet" />
+    <!--<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>-->
+    <script src="RefreshAdmin.js"></script>
+</head>
+<body style="text-align: center">
+    <h1 style="text-align: center">Refresh Admin Portal</h1>
+    <table style="text-align: center; position: relative; margin: auto; margin-top: 20px;" class="table table-striped table-bordered table-condensed">
+        <tbody></tbody>
+        <thead>
+            <tr style="text-align: center">
+                <th id="Developer">Developer</th>
+                <th id="Human">Human</th>
+            </tr>
+        </thead>
+        <thead>
+        </thead>
+        <tbody>
+            <tr>
+                <td align="center">
+                    <br>
+                    <button style="text-align: center" onclick="postConfig()">POST Refresh Config</button>
+                    <br>
+                    <br>
+                    <textarea id="jsonConfig" type="text" placeholder="Enter JSON Config" style="width: 500px; height: 150px; text-align: center; background: rgb(227, 236, 236);"></textarea>
+                    <br>
+                    <br>
+                    <b>Hint: </b>
+                    <br>
+                    <textarea id="Textarea2" type="text" style="width: 500px; height: 60px; text-align: center; background: rgb(227, 236, 236);">[{"Url":"http://jive.ms.com/groups/mobilehub-hybrid","Time":5000,"Zoom":100,"Title":"MobileHub Hybrid Group"},{"Url":"http://jive.ms.com/docs/DOC-9612","Time":5000,"Zoom":100,"Title":"Javascript Scope Chain"},{"Url":"http://jive.ms.com/blogs/mayank/2012/12/04/a-good-week","Time":5000,"Zoom":100,"Title":"Mayank's Weekly Blog Post"},{"Url":"http://news.cnet.com/8301-17938_105-57600530-1/when-game-gadget-design-goes-weird/","Time":5000,"Zoom":100,"Title":"When game gadget design goes weird"}]</textarea>
+                    <br>
+                    <br>
+                    <br>
+                    <button style="text-align: center" onclick="getConfig()">GET Refresh Config</button>
+                    <br>
+                    <br>
+                    <textarea id="Textarea1" type="text" style="width: 500px; height: 150px; text-align: center; background: rgb(227, 236, 236);"></textarea>
+                    <br>
+                    <br>
+                    <br>
+                    <button style="text-align: center" onclick="deleteCurrentConfig()">DELETE Current Refresh Config</button>
+                    <br>
+                    <br>
+                    <br>
+                </td>
+                <td>
+                            <fieldset>
+
+                                <!-- Form Name -->
+                                <legend>Share this Page...</legend>
+
+                                <!-- Text input-->
+                                <div class="control-group">
+                                    <label class="control-label" for="Address">Address</label>
+                                    <div class="controls">
+                                        <input id="Address" name="Address" type="text" placeholder="Address of the Web Page" class="input-xlarge" required="">
+    
+                                    </div>
+                                </div>
+
+                                <!-- Text input-->
+                                <div class="control-group">
+                                    <label class="control-label" for="time">Display Time</label>
+                                    <div class="controls">
+                                        <input id="time" name="time" type="text" placeholder="Seconds for which the Page is visible" class="input-xlarge" required="">
+    
+                                    </div>
+                                </div>
+
+                                <!-- Text input-->
+                                <div class="control-group">
+                                    <label class="control-label" for="Zoom">Zoom</label>
+                                    <div class="controls">
+                                        <input id="Zoom" name="Zoom" type="text" placeholder="in % above 100" class="input-xlarge">
+    
+                                    </div>
+                                </div>
+
+                                <!-- Text input-->
+                                <div class="control-group">
+                                    <label class="control-label" for="Title">Title</label>
+                                    <div class="controls">
+                                        <input id="Title" name="Title" type="text" placeholder="Description of the Page" class="input-xlarge" required="">
+    
+                                    </div>
+                                </div>
+
+                               <!-- <!-- Button -->
+                                <div class="control-group">
+                                    <label class="control-label" for="Submit"></label>
+                                    <div class="controls">
+                                        <button id="Submit" name="Submit" onclick="postSingleConfig()" >Project Now</button>
+                                    </div>
+                                </div>
+                                <!--<button id="ab" name="abc" onclick="postSingleConfig()" >Project Now ...</button>-->
+                            </fieldset>
+                   <!-- <button id="abc" name="abc" onclick="postSingleConfig()">Project Now ...</button>-->
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
