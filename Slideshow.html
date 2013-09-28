@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>WMT Refresh Live</title>    
+    <script src="Scripts/jquery-1.8.2.js"></script>
+    <link href="Scripts/style.css" rel="stylesheet" />
+    <script src="Scripts/Timeout.js"></script>
+    <!--<link href="http://fonts.googleapis.com/css?family=Cookie|Open+Sans:400,700" rel="stylesheet" />-->
+    <!--<script src="Scripts/Slideshow.js"></script>-->
+</head>
+<body ng-app="instantSearch" ng-controller="InstantSearchController">
+    <b><font font size="10" >WMT Refresh Live</font></b>
+<br>
+<br>
+    <h2>What's in store:</h2>
+<br>
+			<!-- Create a binding between the searchString model and the text field -->
+			<!--<input type="text" ng-model="searchString" placeholder="Enter your search terms" />-->
+		<!--</div> -->
+
+<ul>
+    <!-- Render a li element for every entry in the items array. Notice
+        the custom search filter "searchFor". It takes the value of the
+        searchString model as an argument.
+        -->
+    <li ng-repeat="i in items | searchFor:searchString">
+        <!--<li ng-repeat="i in items">-->
+        <!--<p ng-src="{{i.image}}" />-->
+        <a href="{{i.Url}}"><p>{{i.Title}}</p></a>
+    </li>
+</ul>
+<br>
+    <br><br><br>
+    <h2 id="showTimer">Here we go  </h2>
+		<!-- Include AngularJS from Google's CDN -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+		<script src="Scripts/script.js"></script>
+	</body>
+</html>
